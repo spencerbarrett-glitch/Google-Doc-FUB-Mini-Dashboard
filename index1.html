@@ -1,0 +1,46 @@
+<script type="text/javascript" src="https://eia.followupboss.com/embeddedApps-v1.0.1.js"></script>
+<script>
+FUB.EmbeddedApp.ready(function() {
+    // Set the app height explicitly - this is often the main issue
+    FUB.EmbeddedApp.setHeight(400); // Adjust height as needed
+    
+    var scrollingContent = document.createElement('div');
+    scrollingContent.style.cssText = `
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    `;
+    
+    scrollingContent.innerHTML = `
+        <marquee direction="up" behavior="scroll" scrollamount="2" loop="-1" style="
+            width: 100%;
+            height: 100%;
+            display: block;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            text-align: left;
+            padding: 10px;
+            margin: 0;
+        ">
+            IMPORTANT ITEMS<br>
+            • TAGS to Trigger Automations:<br>
+            • #ratifiedbuyer<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;New Contract on the Buy-Side<br>
+            • #newlisting<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;New Seller<br>
+            • #offeraccepted<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Offer Accepted on Active Listing<br>
+            <br>
+            CRITICAL REMINDERS<br>
+            Before Tagging!<br>
+            • Select Listing or Transaction Coordinators<br>
+            • Upload all Files
+        </marquee>
+    `;
+    
+    document.body.appendChild(scrollingContent);
+});
+</script>
